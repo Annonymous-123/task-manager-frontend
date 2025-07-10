@@ -6,7 +6,6 @@ function Filter(props) {
   const [filteredTask, setFilteredTask] = useState('');
   function filterInputChange(event) {
     setFilteredTask(event.target.value);
-    console.log(event.target.value);
   }
 
   return (
