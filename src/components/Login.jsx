@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-
 import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
@@ -31,8 +30,6 @@ function Login() {
       });
       const data = await res.json();
       // const userId = data.user.id;
-      console.log(data);
-      console.log(data.user);
 
       if (res.status === 200 && data.user) {
         localStorage.setItem('user_id', data.user.id);
@@ -47,10 +44,13 @@ function Login() {
   }
   return (
     <div className="flex flex-row min-h-screen ">
-      <div className="flex items-center bg-blue-50 w-1/3 ">
+      <div className="flex flex-col justify-center bg-blue-50 w-1/3 ">
         <h1 className="align-self-center font-serif pl-16  my-4 text-4xl font-bold leading-none tracking-tight text-blue-900 dark:text-blue-900 text-center">
           Task Manager
         </h1>
+        <h3 className="align-self-center font-serif pl-16  my-4 text-xl  text-blue-900 dark:text-blue-900 text-center">
+          - Because sticky notes aren't scalable.
+        </h3>
       </div>
       <div className="flex flex-col p-16 w-2/3 items-center">
         <h1 className=" my-4 text-4xl font-extrabold leading-none tracking-tight text-blue-900 dark:text-blue-900">
